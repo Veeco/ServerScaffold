@@ -1,17 +1,17 @@
 ## 使用方法
 
-* 1.请安装IntelliJ，用IntelliJ打开项目
-* 2.配置好jdk目录
-* 3.安装mysql，并将`src/main/resources/application.properties`文件下的数据库改为您配置的数据库
-* 4.tools目录下有个data.sql文件，里面是sql语句，可以用navicat一键导入数据库结构
-* 5.修改根目录下的gradle.properties文件，设置开发还是发版
+* 1.git clone https://github.com/Veeco/ServerScaffold
+* 2.请安装IntelliJ，用IntelliJ打开项目
+* 3.配置好jdk目录
+* 4.安装mysql，并将`src/main/resources/application.properties`文件下的数据库改为您配置的数据库
+* 5.tools目录下有个data.sql文件，里面是sql语句，可以用navicat一键导入数据库结构
+* 6.修改根目录下的gradle.properties文件，设置开发还是发版
 
-当开发模式时，直接点击运行在浏览器输入 http://localhost:8080/home/taobaolist 即可访问
+当开发模式时，直接点击运行在浏览器输入 http://localhost:8080/home/taobaolist 即可访问。
 
-当发版模式时，在Terminal中输入./gradlew assemble打包，在build/libs/下生成ServerScaffold-1.0.war，
-将这个war包拷贝到tomcat的webapps下，运行tomcat，在浏览器输入 http://localhost:8080/ServerScaffold-1.0/home/taobaolist 即可访问
+当发版模式时，在Terminal中输入./gradlew assemble打包，在build/libs/下生成ServerScaffold-1.0.war，将这个war包拷贝到tomcat的webapps下，运行tomcat，在浏览器输入 http://localhost:8080/ServerScaffold-1.0/home/taobaolist 即可访问。
 
-详细使用方法请参考doc目录下的[服务器搭建](https://github.com/Veeco/ServerScaffold/tree/master/doc/服务器搭建.md)
+详细使用方法请参考doc目录下的[服务器搭建](https://github.com/Veeco/ServerScaffold/tree/master/doc/服务器搭建.md)。
 
 ## 目录结构
 
