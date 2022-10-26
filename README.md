@@ -1,3 +1,5 @@
+## 改造自 https://github.com/G-Joker/WeaponApp
+
 ## 使用方法
 
 * 1.git clone https://github.com/Veeco/ServerScaffold
