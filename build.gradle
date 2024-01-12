@@ -41,7 +41,7 @@ dependencies {
 	compile('org.projectlombok:lombok')
 	compile("org.jsoup:jsoup:1.9.2")
 	compile("cn.jpush.api:jpush-client:3.3.5")
-	runtime('mysql:mysql-connector-java')
+	compile('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	if (!DEVELOP_MODE.toBoolean()) {
 		providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
