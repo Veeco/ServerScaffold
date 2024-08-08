@@ -10,8 +10,11 @@ import com.app.server.util.SafeUtil;
 import com.app.server.util.TextUtils;
 import com.app.server.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import java.util.Map;
 
 @RestController
 public class UserController {
@@ -36,8 +39,10 @@ public class UserController {
         return new DataResponse(userModel,"登录成功", ConstResponse.STATUS_OK);
     }
 
-    @RequestMapping("/user/register")
-    public BaseResponse register(String name, String password){
+    @PostMapping("/user/register")
+    public BaseResponse register(@RequestBody Map<String, String> requestData){
+        String name = requestData.get("name");
+        String password = requestData.get("password");
         System.out.println("phone="+name+" password="+password);
         if(name==null||password==null){
             return new BaseResponse(ConstResponse.DESC_PARAM, ConstResponse.STATUS_PARAM_ERROR);
