@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @MapperScan("com.app.server.mapper")
 public class BaseApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BaseApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BaseApplication.class, args);
+    }
 }

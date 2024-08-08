@@ -15,8 +15,8 @@ public class TaobaoController {
     private TaobaoMappper taobaoMappper;
 
     @RequestMapping("/home/taobaolist")
-    public BaseResponse taobao(){
-        return new DataResponse(taobaoMappper.selectAll(),ConstResponse.DESC_OK, ConstResponse.STATUS_OK);
+    public BaseResponse taobao() {
+        return new DataResponse(taobaoMappper.selectAll(), ConstResponse.DESC_OK, ConstResponse.STATUS_OK);
     }
 
 }

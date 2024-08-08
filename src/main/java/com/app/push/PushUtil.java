@@ -43,8 +43,9 @@ public class PushUtil {
 
     /**
      * 每日推送
+     *
      * @param audience 推送对象
-     * @param model 推送数据
+     * @param model    推送数据
      */
     public void pushRecommendDaily(Audience audience, RecommendDailyModel model) {
         PushPayload payload = PushPayload.newBuilder()

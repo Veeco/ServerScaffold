@@ -21,7 +21,7 @@ public class WeaponAppPush {
         RecommendDailyModel model = new RecommendDailyModel();
         model.content = "content";
         model.title = "title";
-        model.time  = Util.getStrTime(System.currentTimeMillis(), "yyyy-MM-dd HH:mm");
+        model.time = Util.getStrTime(System.currentTimeMillis(), "yyyy-MM-dd HH:mm");
         model.url = "https://www.jiguang.cn/push";
         model.imageUrl = "http://avatar.csdn.net/C/A/8/1_ningmeng718.jpg";
         PushUtil.getInstance().pushRecommendDaily(Audience.alias("WeaponApp"), model);

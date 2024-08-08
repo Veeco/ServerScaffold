@@ -12,7 +12,7 @@ public interface UserMappper {
     UserModel findUserByname(String user);
 
     @Insert("insert into user(user, password,token) values(#{phone}, #{password}, #{token})")
-    void register(@Param("phone")String phone, @Param("password")String password, @Param("token")String token);
+    void register(@Param("phone") String phone, @Param("password") String password, @Param("token") String token);
 
 
 }

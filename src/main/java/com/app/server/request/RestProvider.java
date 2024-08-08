@@ -3,15 +3,16 @@ package com.app.server.request;
 import com.app.server.model.TaobaoModel;
 
 import java.text.MessageFormat;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class RestProvider {
 
-    /** 该方法必须是Map作为参数，将List的数据转换为sql语句一次性插入*/
-    public String insertAllTaobao(Map map) {
-        List<TaobaoModel> list = (List<TaobaoModel>) map.get("list");
+    /**
+     * 该方法必须是Map作为参数，将List的数据转换为sql语句一次性插入
+     */
+    public String insertAllTaobao(Map<String, List<TaobaoModel>> map) {
+        List<TaobaoModel> list = map.get("list");
         StringBuilder sb = new StringBuilder();
         sb.append("REPLACE INTO taobao ");
         sb.append("(user, title, image, price, time, region, sign) ");

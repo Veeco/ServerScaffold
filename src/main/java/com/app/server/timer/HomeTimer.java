@@ -8,7 +8,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -21,10 +20,10 @@ public class HomeTimer {
     SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
     /*每100秒执行一次*/
-    @Scheduled(initialDelay = 1,fixedRate = 60000)
+    @Scheduled(initialDelay = 1, fixedRate = 60000)
     public void timerRate() {
-        String url="https://s.2.taobao.com/list/list.htm";
-        List<TaobaoModel> list=RestTemplateController.getInstance().getTaobao(url);
+        String url = "https://s.2.taobao.com/list/list.htm";
+        List<TaobaoModel> list = RestTemplateController.getInstance().getTaobao(url);
         if (list != null && list.size() > 0) {
             taobaoMappper.deleteAll();
             taobaoMappper.insertAll(list);
@@ -34,6 +33,6 @@ public class HomeTimer {
     /*每天12:00:00时执行*/
     @Scheduled(cron = "0 00 12 * * ? ")
     public void timerCron() {
-        System.out.println("current time : "+ dateFormat.format(new Date()));
+        System.out.println("current time : " + dateFormat.format(new Date()));
     }
 }

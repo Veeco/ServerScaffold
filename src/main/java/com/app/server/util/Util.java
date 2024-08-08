@@ -9,7 +9,6 @@ public class Util {
      *
      * @param time  时间戳
      * @param style 时间格式 (类似于"yyyy-MM-dd HH:mm")
-     * @return
      */
     public static String getStrTime(long time, String style) {
         String re_StrTime = null;

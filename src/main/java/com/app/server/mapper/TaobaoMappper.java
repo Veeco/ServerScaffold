@@ -1,13 +1,11 @@
 package com.app.server.mapper;
 
 import com.app.server.model.TaobaoModel;
-import com.app.server.model.UserModel;
 import com.app.server.request.RestProvider;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import java.beans.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
