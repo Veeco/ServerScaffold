@@ -1,6 +1,0 @@
-apply from: '../module.gradle'
-android{
-    defaultConfig{
-        applicationId "com.weapon.joker.app.message"
-    }
-}
